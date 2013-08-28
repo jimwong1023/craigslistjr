@@ -19,5 +19,6 @@ gem 'shotgun'
 
 group :test do
   gem 'faker'
+  gem 'titleize'
   gem 'rspec'
 end
