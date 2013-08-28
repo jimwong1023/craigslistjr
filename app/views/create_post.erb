@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Create a new post in Category:<br><%= Category.find(params[:category_id]).category_name %></h1>
+
+  <form action='/create_post/<%= params[:category_id] %>' method="post">
+  	TITLE:<br>
+  	<input type="text" name="title_input"><br><br>
+  	DESCRIPTION:<br>
+  	<textarea cols="50" rows="5" name="desc_input"></textarea><br><br>
+  	<input type="submit" value="Submit">
+  </form>
+ </div>

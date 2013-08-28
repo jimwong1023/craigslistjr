@@ -1,0 +1,4 @@
+<div class="container">
+  <h1>Post Title: <%= Post.find(params[:post_id]).title %></h1><br><br>
+  <h2>Description: </h2>
+  <p><%= Post.find(params[:post_id]).description %></p>

@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>EDIT <%= Post.find(params[:post_id]).title %></h1><br>
+  <p>SAVE THIS LINK FOR FUTURE EDITS!</p>
+
+  <form action="/edit/<%= params[:category_id] %>/<%= params[:post_id] %>/<%= params[:key] %>" method="post">
+  	EDIT TITLE:<br>
+  	<input type="text" name="title_input" value="<%= Post.find(params[:post_id]).title %>"><br><br>
+  	EDIT DESCRIPTION:<br>
+  	<textarea cols="50" rows="5" name="desc_input"><%= Post.find(params[:post_id]).description %></textarea><br><br>
+  	<input type="submit" value="Confirm Post">
+  </form>
+ </div>

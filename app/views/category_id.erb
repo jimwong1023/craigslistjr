@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Category: <%= Category.find(params[:category_id]).category_name %></h1>
+  <h2>Posts</h2>
+  <% Post.where(:category_id => params[:category_id]).each do |object| %>
+    <a href="/post/<%= params[:category_id] %>/<%= object.id %>"><%= object.title %></a>
+    <br>
+  <% end %>
+  <br>
+  <hr>
+  <a href="/create_post/<%= params[:category_id] %>">Create Post</a>
+</div>
